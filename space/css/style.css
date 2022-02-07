@@ -1,0 +1,276 @@
+body {
+  box-sizing: border-box;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  height: 100vh;
+  min-height: 100%;
+  width: 100vw;
+  min-width: 100%;
+  background-color: #ccc;
+  position: relative;
+}
+
+/****************************
+    header nav
+****************************/
+#menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  height: 96px;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navigation {
+  width: 830px;
+  height: 96px;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  backdrop-filter: blur(10px);
+  gap: 30px;
+  text-transform: uppercase;
+}
+
+.navigation li {
+  display: inline-block;
+}
+
+.navigation li:first-child {
+  margin-left: 144px;
+}
+.navigation li:last-child {
+  margin-right: 144px;
+}
+.logo {
+  height: 48px;
+  width: 48px;
+  position: absolute;
+  left: 55px;
+}
+
+/****************************
+    contents
+****************************/
+
+#desktopHome {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  min-width: 100vw;
+  background-image: url(../assets/home/background-home-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.textContainer {
+  position: absolute;
+  left: 165px;
+  top: 387px;
+  width: 445px;
+  height: 382px;
+}
+
+.beforeTitle {
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: Barlow Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 4.725px;
+  color: #d0d6f9;
+}
+
+.title {
+  font-family: Bellefair;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 150px;
+  line-height: 172px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.descriptionContainer {
+  color: #d0d6f9;
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.btnWhiteBig {
+  position: absolute;
+  right: 165px;
+  top: 495px;
+  width: 274px;
+  height: 274px;
+  border-radius: 100%;
+  background-color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid #fff;
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 37px;
+  letter-spacing: 2px;
+  box-shadow: 0;
+  z-index: 5000;
+}
+
+.btnWhiteBig:active {
+  box-shadow: 0 0 30px #000 inset;
+  border: 1px solid #000;
+}
+
+/****************************************************************
+                DESTINATION style
+****************************************************************/
+
+#destinationWrapper {
+  background-image: url(../assets/destination/background-destination-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+#desktopDestination {
+  width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  color: #fff;
+  position: relative;
+}
+
+.subtitle {
+  height: 34px;
+  width: 380px;
+  position: absolute;
+  top: 212px;
+  left: 166px;
+  color: #fff;
+  display: inline;
+  font-family: "Barlow Condensed";
+  font-style: Bold;
+  font-size: 28px;
+  text-align: left;
+  vertical-align: Top;
+  letter-spacing: 4.72px;
+}
+
+.subtitle p {
+  line-height: 32px;
+  display: inline;
+}
+
+.subtitle span {
+  opacity: 0.25;
+  padding-right: 25px;
+}
+
+.destinationImageContainer {
+  position: absolute;
+  top: 343px;
+  left: 230px;
+  height: 445px;
+  width: 445px;
+  background-color: #990000;
+}
+
+img.destinationImage {
+  height: 445px;
+  width: 445px;
+  opacity: 0.3;
+}
+
+.destinationMenuContainer {
+  width: 286px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#destinationMenu {
+  list-style: none;
+}
+
+#destinationMenu li {
+  display: inline;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: left;
+}
+
+.textDestinationContainer {
+  position: absolute;
+  top: 310px;
+  left: 832px;
+  height: 472px;
+  width: 445px;
+}
+
+.destinationTitle {
+  color: #fff;
+  font-family: "Bellefair";
+  font-style: normal;
+  font-size: 100px;
+  line-height: 115px;
+  text-transform: uppercase;
+}
+
+.destinationDescription {
+  color: #fff;
+  font-family: "Barlow";
+  font-style: normal;
+  font-size: 18px;
+  line-height: 32px;
+  line-height: 148%;
+}
+
+hr {
+    border: 1px solid #383B4B;
+}
+
+.destinationData {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    color: #fff;
+}
+
+.destinationDistance {
+  
+}
+
+.destinationETA {
+
+}
