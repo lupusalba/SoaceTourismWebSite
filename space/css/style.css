@@ -16,6 +16,13 @@ ul {
   position: relative;
 }
 
+
+.container {
+  height: auto;
+  min-width: 80%;
+  margin: 0 10%;
+  position: relative;
+}
 /****************************
     header nav
 ****************************/
@@ -71,7 +78,7 @@ ul {
 ****************************/
 
 #desktopHome {
-  height: 100%;
+  height: 100vh;
   min-height: 100%;
   width: 100%;
   min-width: 100vw;
