@@ -65,18 +65,19 @@
             </div>
 
             <div id="destinationImageContainer">
-                <img id="destImage" src="" alt="" class="destinationImage">
+                <img id="destImage" src="./assets/destination/image-mars.png" alt="" class="destinationImage">
             </div>
 
             <div class="textDestinationContainer">
 
                 <div class="destinationMenuContainer">
                     <ul id="destinationMenu">
-                        <li>moon</li>
-                        <li>mars</li>
-                        <li>europa</li>
-                        <li>titan</li>
+                        <li id="moonLink" onclick="linkClick(0)">moon</li>
+                        <li id="marsLink" onclick="linkClick(1)">mars</li>
+                        <li id="europaLink" onclick="linkClick(2)">europa</li>
+                        <li id="titanLink" onclick="linkClick(3)">titan</li>
                     </ul>
+                    
                 </div>
 
                 <div id="destinationTitle">mars</div>
@@ -109,25 +110,28 @@
         var destinationETA = document.getElementById('destinationETA');
         var destImage = document.getElementById('destImage');
 
-        fetch('./data.json')
+
+        function linkClick(linkID){
+
+            fetch('./data.json')
             .then((response) => {
                 return response.json()
             })
             .then((data) => {
                 // Work with JSON data here
-                destinaionTitle.innerHTML = data["destinations"][2].name;
-                destinationDescription.innerHTML = data["destinations"][2].description;
-                destinationDistance.innerHTML = data["destinations"][2].distance;
-                destinationETA.innerHTML = data["destinations"][2].travel;
-                destImage.src = data["destinations"][2]["images"]["png"];
+                destinaionTitle.innerHTML = data["destinations"][`${linkID}`].name;
+                destinationDescription.innerHTML = data["destinations"][`${linkID}`].description;
+                destinationDistance.innerHTML = data["destinations"][`${linkID}`].distance;
+                destinationETA.innerHTML = data["destinations"][`${linkID}`].travel;
+                destImage.src = data["destinations"][`${linkID}`]["images"]["png"];
 
 
-                console.log(data["destinations"][2]["images"]["png"]);
+                console.log(data["destinations"][`${linkID}`]["images"]["png"]);
             })
             .catch((err) => {
                 // Do something for an error here
             })
-
+        }
 
 
     </script>
