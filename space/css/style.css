@@ -18,9 +18,9 @@ ul {
 
 
 .container {
-  height: auto;
-  min-width: 80%;
-  margin: 0 10%;
+  height: 100vh;
+  min-width: 70vw;
+  margin: 0 15vw;
   position: relative;
 }
 /****************************
@@ -201,13 +201,12 @@ ul {
   padding-right: 25px;
 }
 
-.destinationImageContainer {
+#destinationImageContainer {
   position: absolute;
   top: 343px;
   left: 230px;
   height: 445px;
   width: 445px;
-  background-color: #990000;
 }
 
 img.destinationImage {
@@ -241,7 +240,7 @@ img.destinationImage {
   width: 445px;
 }
 
-.destinationTitle {
+#destinationTitle {
   color: #fff;
   font-family: "Bellefair";
   font-style: normal;
@@ -250,7 +249,7 @@ img.destinationImage {
   text-transform: uppercase;
 }
 
-.destinationDescription {
+#destinationDescription {
   color: #fff;
   font-family: "Barlow";
   font-style: normal;
@@ -263,7 +262,7 @@ hr {
     border: 1px solid #383B4B;
 }
 
-.destinationData {
+#destinationData {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -274,10 +273,11 @@ hr {
     color: #fff;
 }
 
-.destinationDistance {
+#destinationDistance {
   
 }
 
-.destinationETA {
+.
+#destinationETA {
 
 }

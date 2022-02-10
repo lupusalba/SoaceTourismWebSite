@@ -64,8 +64,8 @@
                 <p>PICK YOUR DESTINATION</p>
             </div>
 
-            <div class="destinationImageContainer">
-                <img src="" alt="" class="destinationImage">
+            <div id="destinationImageContainer">
+                <img id="destImage" src="" alt="" class="destinationImage">
             </div>
 
             <div class="textDestinationContainer">
@@ -79,9 +79,9 @@
                     </ul>
                 </div>
 
-                <div class="destinationTitle">mars</div>
+                <div id="destinationTitle">mars</div>
 
-                <div class="destinationDescription">
+                <div id="destinationDescription">
                     <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain
                         perspective and come back refreshed. While you’re there, take in some history by visiting the
                         Luna 2 and Apollo 11 landing sites.</p>
@@ -89,9 +89,9 @@
 
                 <hr>
 
-                <div class="destinationData">
-                    <div class="destinationDistance">Distance</div>
-                    <div class="destinationETA">time</div>
+                <div id="destinationData">
+                    <div id="destinationDistance">Distance</div>
+                    <div id="destinationETA">time</div>
                 </div>
 
             </div><!-- /.textDestinationContainer-->
@@ -100,6 +100,37 @@
 
 
     </div><!-- /.wrapper -->
+
+    <script>
+        var destinaionTitle = document.getElementById('destinationTitle');
+        var destinationDescription = document.getElementById('destinationDescription');
+        var destinationData = document.getElementById('destinationData');
+        var destinationDistance = document.getElementById('destinationDistance');
+        var destinationETA = document.getElementById('destinationETA');
+        var destImage = document.getElementById('destImage');
+
+        fetch('./data.json')
+            .then((response) => {
+                return response.json()
+            })
+            .then((data) => {
+                // Work with JSON data here
+                destinaionTitle.innerHTML = data["destinations"][2].name;
+                destinationDescription.innerHTML = data["destinations"][2].description;
+                destinationDistance.innerHTML = data["destinations"][2].distance;
+                destinationETA.innerHTML = data["destinations"][2].travel;
+                destImage.src = data["destinations"][2]["images"]["png"];
+
+
+                console.log(data["destinations"][2]["images"]["png"]);
+            })
+            .catch((err) => {
+                // Do something for an error here
+            })
+
+
+
+    </script>
 
 </body>
 
