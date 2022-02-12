@@ -14,8 +14,10 @@ ul {
   min-width: 100%;
   background-color: #ccc;
   position: relative;
+  background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
 }
-
 
 .container {
   height: 100vh;
@@ -159,15 +161,10 @@ ul {
 
 #destinationWrapper {
   background-image: url(../assets/destination/background-destination-desktop.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-  width: 100vw;
-  position: relative;
 }
 
-#desktopDestination {
+#desktopDestination,
+#desktopCrew {
   width: 1440px;
   height: 100vh;
   margin: 0 auto;
@@ -281,4 +278,68 @@ hr {
 .
 #destinationETA {
 
+}
+
+/**********************************
+      CREW
+**********/
+
+#crewWrapper {
+  background-image: url('../assets/crew/background-crew-desktop.jpg');
+}
+
+#textCrewContainer {
+  position: absolute;
+  left: 165px;
+  top: 400px;
+}
+
+#crewRole {
+  font-family: Bellefair;
+  font-size: 32px;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+
+#crewName {
+  font-size: 56px;
+  font-family: Bellefair;
+  text-transform: uppercase;
+}
+
+#crewBio {
+  width:450px;
+  color: #D0D6F9;
+  font-size: 18px;
+  font-family: Barlow;
+}
+
+#imageCrewContainer {
+  position: absolute;
+  bottom: 0px;
+  left: 735px;
+  height: 710px;
+  width: 350px;
+}
+
+img#imagCrew {
+  height: 710px;
+  width: auto;
+}
+
+#crewNav ul {
+  list-style: none;
+}
+
+#crewNav ul li {
+  display: inline;
+}
+
+.bullet {
+  position: absolute;
+  top: 790px;
+  left: 165px;
+  padding: 10px;
+  border-radius: 100%;
+  background-color: #fff;
 }

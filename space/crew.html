@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Frontend Mentor | Space tourism website</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+
+    <!-- GOOGLE fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:wght@500&display=swap"
+        rel="stylesheet">
+
+    <!-- custom css-->
+    <link rel="stylesheet" type="text/css" href="/space/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/space/css/responsive.css">
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        ul {
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="crewWrapper" class="wrapper">
+
+        <nav id="menu">
+            <img src="/space/assets/shared/logo.svg" alt="Logo" class="logo">
+
+            <ul class="navigation">
+                <li>00 home</li>
+                <li>01 destination</li>
+                <li>02 crew</li>
+                <li>03 Technology</li>
+            </ul>
+        </nav>
+
+        <div id="desktopCrew">
+
+           
+            <div class="subtitle">
+                <span class="darkened">02</span>
+                <p>meet your crew</p>
+            </div>
+
+            <div id="temp">
+            <div id="textCrewContainer">
+
+                <div id="crewRole">
+                    <p>Commander</p>
+                </div>
+
+                <div id="crewName">
+                    <p>Douglas Hurley</p>
+                </div>
+                
+                <div id="crewBio">
+                    <p>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
+                </div>
+
+            </div><!-- /.textCrewContainer -->
+
+            <div id="crewNav">
+                <ul>
+                    <li onclick="linkID(0)"><span class="bullet"></span></li>
+                    <li onclick="linkID(1)"><span class="bullet"></span></li>
+                    <li onclick="linkID(2)"><span class="bullet"></span></li>
+                    <li onclick="linkID(3)"><span class="bullet"></span></li>
+                </ul>
+            </div>
+
+            <div id="imageCrewContainer">
+                <img src="./assets/crew/image-douglas-hurley.png" alt="" id="imageCrew">
+            </div><!-- /.imageCrewContainer -->
+        </div>
+        </div><!-- /#desktopCrew -->
+
+
+    </div><!-- /.wrapper -->
+
+    <script>
+        var crewRole = document.getElementById('crewRole');
+        var crewName = document.getElementById('crewName');
+        var crewBio = document.getElementById('crewBio');
+        var imageCrew = document.getElementById('imageCrew');
+
+
+        
+
+        function linkClick(linkID){
+
+            fetch('./data.json')
+            .then((response) => {
+                return response.json()
+            })
+            .then((data) => {
+                // Work with JSON data here
+                crewRole.innerHTML = data["crew"][`${linkID}`].role;
+                crewName.innerHTML = data["crew"][`${linkID}`].crewName;
+                crewBio.innerHTML = data["crew"][`${linkID}`].bio;
+                imageCrew.src = data["crew"][`${linkID}`]["images"]["png"];
+
+                
+                console.log(data["crew"][`${linkID}`]["images"]["png"]);
+                
+            })
+            .catch((err) => {
+                // Do something for an error here
+            })
+        }
+
+
+    </script>
+
+</body>
+
+</html>
