@@ -72,10 +72,10 @@
 
                 <div class="destinationMenuContainer">
                     <ul id="destinationMenu">
-                        <li id="moonLink" onclick="linkClick(0)">moon</li>
-                        <li id="marsLink" onclick="linkClick(1)">mars</li>
-                        <li id="europaLink" onclick="linkClick(2)">europa</li>
-                        <li id="titanLink" onclick="linkClick(3)">titan</li>
+                        <li class="linkUnactive" id="destination0" onclick="linkClick(0)">moon</li>
+                        <li class="linkUnactive" id="destination1" onclick="linkClick(1)">mars</li>
+                        <li id="destination2" onclick="linkClick(2)">europa</li>
+                        <li id="destination3" onclick="linkClick(3)">titan</li>
                     </ul>
                     
                 </div>
@@ -105,11 +105,12 @@
     <script>
         var destinaionTitle = document.getElementById('destinationTitle');
         var destinationDescription = document.getElementById('destinationDescription');
-        var destinationData = document.getElementById('destinationData');
         var destinationDistance = document.getElementById('destinationDistance');
         var destinationETA = document.getElementById('destinationETA');
         var destImage = document.getElementById('destImage');
 
+
+        
 
         function linkClick(linkID){
 
@@ -124,9 +125,14 @@
                 destinationDistance.innerHTML = data["destinations"][`${linkID}`].distance;
                 destinationETA.innerHTML = data["destinations"][`${linkID}`].travel;
                 destImage.src = data["destinations"][`${linkID}`]["images"]["png"];
+                
 
+                document.querySelector(".linkUnactive").remo
+                document.getElementById(`destination${linkID}`).style.borderBottom = "2px solid #fff";
 
+                
                 console.log(data["destinations"][`${linkID}`]["images"]["png"]);
+                
             })
             .catch((err) => {
                 // Do something for an error here
