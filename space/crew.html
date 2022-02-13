@@ -50,6 +50,8 @@
             </ul>
         </nav>
 
+        <hr class="menuHr">
+
         <div id="desktopCrew">
 
            
@@ -62,25 +64,25 @@
             <div id="textCrewContainer">
 
                 <div id="crewRole">
-                    <p>Commander</p>
+                    Commander
                 </div>
 
                 <div id="crewName">
-                    <p>Douglas Hurley</p>
+                    Douglas Hurley
                 </div>
                 
                 <div id="crewBio">
-                    <p>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
+                    Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.
                 </div>
 
             </div><!-- /.textCrewContainer -->
 
             <div id="crewNav">
                 <ul>
-                    <li onclick="linkID(0)"><span class="bullet"></span></li>
-                    <li onclick="linkID(1)"><span class="bullet"></span></li>
-                    <li onclick="linkID(2)"><span class="bullet"></span></li>
-                    <li onclick="linkID(3)"><span class="bullet"></span></li>
+                    <li onclick="linkClick(0)"><span class="bullet"></span></li>
+                    <li onclick="linkClick(1)"><span class="bullet"></span></li>
+                    <li onclick="linkClick(2)"><span class="bullet"></span></li>
+                    <li onclick="linkClick(3)"><span class="bullet"></span></li>
                 </ul>
             </div>
 
@@ -110,13 +112,14 @@
             })
             .then((data) => {
                 // Work with JSON data here
+                
                 crewRole.innerHTML = data["crew"][`${linkID}`].role;
-                crewName.innerHTML = data["crew"][`${linkID}`].crewName;
+                crewName.innerHTML = data["crew"][`${linkID}`].name;
                 crewBio.innerHTML = data["crew"][`${linkID}`].bio;
                 imageCrew.src = data["crew"][`${linkID}`]["images"]["png"];
 
-                
-                console.log(data["crew"][`${linkID}`]["images"]["png"]);
+                console.log(crewRole);
+                console.log(data["crew"][1]["name"]);
                 
             })
             .catch((err) => {
