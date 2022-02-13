@@ -117,9 +117,6 @@
                 crewName.innerHTML = data["crew"][`${linkID}`].name;
                 crewBio.innerHTML = data["crew"][`${linkID}`].bio;
                 imageCrew.src = data["crew"][`${linkID}`]["images"]["png"];
-
-                console.log(crewRole);
-                console.log(data["crew"][1]["name"]);
                 
             })
             .catch((err) => {

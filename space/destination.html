@@ -103,7 +103,7 @@
     </div><!-- /.wrapper -->
 
     <script>
-        var destinaionTitle = document.getElementById('destinationTitle');
+        var destinationTitle = document.getElementById('destinationTitle');
         var destinationDescription = document.getElementById('destinationDescription');
         var destinationDistance = document.getElementById('destinationDistance');
         var destinationETA = document.getElementById('destinationETA');
@@ -120,18 +120,13 @@
             })
             .then((data) => {
                 // Work with JSON data here
-                destinaionTitle.innerHTML = data["destinations"][`${linkID}`].name;
+                destinationTitle.innerHTML = data["destinations"][`${linkID}`].name;
                 destinationDescription.innerHTML = data["destinations"][`${linkID}`].description;
                 destinationDistance.innerHTML = data["destinations"][`${linkID}`].distance;
                 destinationETA.innerHTML = data["destinations"][`${linkID}`].travel;
                 destImage.src = data["destinations"][`${linkID}`]["images"]["png"];
                 
 
-                document.querySelector(".linkUnactive").remo
-                document.getElementById(`destination${linkID}`).style.borderBottom = "2px solid #fff";
-
-                
-                console.log(data["destinations"][`${linkID}`]["images"]["png"]);
                 
             })
             .catch((err) => {
