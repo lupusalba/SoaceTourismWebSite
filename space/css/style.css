@@ -172,7 +172,8 @@ background-position: center;
 }
 
 #desktopDestination,
-#desktopCrew {
+#desktopCrew,
+#desktopTechnology {
   width: 1440px;
   height: 100vh;
   margin: 0 auto;
@@ -351,3 +352,67 @@ img#imageCrew {
   border-radius: 100%;
 }
 
+
+/********************************
+        TECHNOLOGY
+********************************/
+
+#desktopTechnologyWrapper {
+  background-image: url('../assets/technology/background-technology-desktop.jpg');
+}
+
+#textTechnologyContainer {
+  width: 470px;
+  height: 303px;
+  position: absolute;
+  top: 383px;
+  left: 325px;
+}
+
+#technologySubtitle {
+  font-family: "Barlow Condensed";
+  font-size: 16px;
+  color: #D0D6F9;
+}
+
+#technologyTitle {
+  font-family: "Bellefair";
+  font-size: 56px;
+  width: 500px;
+}
+
+#technologyDescription {
+  font-family: "Barlow";
+  font-size: 18px;
+  color: #D0D6F9;
+}
+
+#technologyNav {
+  position: absolute;
+  left: 165px;
+  top: 383px;
+  margin:0;
+  padding: 0;
+}
+
+#technologyNav button {
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  display: block;
+  margin: 0 0 32px 0;
+  padding: 0;
+  font-family: 'Bellefair';
+  font-size: 32px;
+}
+
+#imageTechnology {
+  position: absolute;
+  height: 527px;
+  width: 515px;
+  top: 272px;
+  right: 0;
+}
