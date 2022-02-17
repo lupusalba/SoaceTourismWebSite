@@ -100,7 +100,7 @@
     
 
             <div id="imageTechnologyContainer">
-                <img src="./assets/technology/image-launch-vehicle-landscape.jpg" alt="" id="imageTechnology">
+                <img src="" alt="" id="">
             </div><!-- /.imageTechnologyContainer -->
         </div><!-- /#desktopTechnology -->
 
@@ -110,8 +110,10 @@
     <script>
         var nameTechno = document.getElementById('technologyTitle');
         var description = document.getElementById('technologyDescription');
-        var image = document.getElementById('imageTechnology');
+        var image = document.getElementById('imageTechnologyContainer');
 
+        //bc = './assets/technology/image-launch-vehicle-landscape.jpg';
+        //image.style.backgroundImage = `"url('${bc}')"`;
 
         
 
@@ -123,10 +125,17 @@
             })
             .then((data) => {
                 // Work with JSON data here
-                
+
+                var temp = 'data["technology"][`${linkID}`]["images"]["landscape"]';
+                console.log(data["technology"][1]["images"]["landscape"]);
+                console.log(temp);
                 nameTechno.innerHTML = data["technology"][`${linkID}`].name;
                 description.innerHTML = data["technology"][`${linkID}`].description;
-                image.src = data["technology"][`${linkID}`]["images"]["landscape"];
+                image.style.backgroundImage = url('data["technology"][`${linkID}`]["images"]["landscape"]');
+                //image.style.backgroundImage = `"url('${temp}')"`;
+
+               // document.getElementById('imageTechnologyContainer').style.backgroundImage = 
+                "url('`${temp}`')";
                 
             })
             .catch((err) => {

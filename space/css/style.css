@@ -41,6 +41,7 @@ background-position: center;
   align-content: center;
   justify-content: flex-end;
   align-items: center;
+  z-index: 11111111111;
 }
 
 .navigation {
@@ -409,10 +410,11 @@ img#imageCrew {
   font-size: 32px;
 }
 
-#imageTechnology {
+#imageTechnologyContainer {
   position: absolute;
   height: 527px;
   width: 515px;
   top: 272px;
   right: 0;
+  
 }
