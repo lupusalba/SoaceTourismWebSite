@@ -2,99 +2,101 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Frontend Mentor | Space tourism website</title>
+    <title>Frontend Mentor | Space tourism website</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
 
 
-  <!-- GOOGLE fonts-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:wght@500&display=swap"
-    rel="stylesheet">
+    <!-- GOOGLE fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:wght@500&display=swap"
+        rel="stylesheet">
 
-  <!-- custom css-->
-  <link rel="stylesheet" type="text/css" href="/space/css/style.css">
-  <link rel="stylesheet" type="text/css" href="/space/css/responsive.css">
+    <!-- custom css-->
+    <link rel="stylesheet" type="text/css" href="/space/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/space/css/responsive.css">
 
-  <style type="text/css">
+    <style type="text/css">
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
 
-    *, *::after, *::before {
-      box-sizing: border-box;
-    }
+        body {
+            margin: 0;
+            /*overflow: hidden;*/
+            box-sizing: border-box;
+        }
 
-    body {
-      margin: 0;
-      /*overflow: hidden;*/
-      box-sizing: border-box;
-    }
+        ul {
+            padding: 0;
+        }
 
-    ul {
-      padding: 0;
-    }
-
-    a {
+        a {
             text-decoration: none;
-    }
-  </style>
+        }
+    </style>
 </head>
 
 <body>
 
-  <div id="desktopHome" class="wrapper">
+    <div id="desktopHome" class="wrapper">
 
-    <nav id="menu">
-      <img src="/space/assets/shared/logo.svg" alt="Logo" class="logo">
+        <nav id="menu">
+            <img src="/space/assets/shared/logo.svg" alt="Logo" class="logo">
 
-      <ul class="navigation">
-          <li>
-              <a href="./index.html">
-                  00 home
-              </a>
-          </li>
-          <li>
-              <a href="./destination.html">
-                  01 destination
-              </a>
-          </li>
-          <li>
-              <a href="./crew.html">
-                  02 crew
-              </a>
-          </li>
-          <li>
-              <a href="./technology.html">
-                  03 Technology
-              </a>
-          </li>
-      </ul>
-  </nav>
-
-    
-    <div class="container">
+            <ul class="navigation">
+                <li>
+                    <a href="./index.html">
+                        00 home
+                    </a>
+                </li>
+                <li>
+                    <a href="./destination.html">
+                        01 destination
+                    </a>
+                </li>
+                <li>
+                    <a href="./crew.html">
+                        02 crew
+                    </a>
+                </li>
+                <li>
+                    <a href="./technology.html">
+                        03 Technology
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
 
-
-
-    <div class="textContainer">
-      <div class="beforeTitle">So, you want to travel to</div>
-      <div class="title">SPACE</div>
-      <div class="descriptionContainer"> Let’s face it; if you want to go to space, you might as well genuinely go to 
-  outer space and not hover kind of on the edge of it. Well sit back, and relax 
-  because we’ll give you a truly out of this world experience!</div>
-    </div>
-
-    <button class="btnWhiteBig">Explore</button>
+        <div class="contentContainer"><!-- .container-->
 
 
 
-  </div>
 
-  </div><!-- /#desktopHome -->
+            <div class="textContainer">
+                <div class="beforeTitle">So, you want to travel to</div>
+                <div class="title">SPACE</div>
+                <div class="descriptionContainer"> Let’s face it; if you want to go to space, you might as well
+                    genuinely go to
+                    outer space and not hover kind of on the edge of it. Well sit back, and relax
+                    because we’ll give you a truly out of this world experience!</div>
+            </div>
+
+            <button class="btnWhiteBig">Explore</button>
+
+
+
+        </div>
+
+    </div><!-- /#desktopHome -->
 
 
 </body>
