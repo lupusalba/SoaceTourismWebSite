@@ -24,7 +24,7 @@
     <style type="text/css">
         body {
             margin: 0;
-            /*overflow: hidden;*/
+            overflow: hidden;
             box-sizing: border-box;
         }
 
@@ -50,22 +50,26 @@
             <ul class="navigation">
                 <li>
                     <a href="./index.html">
-                        00 home
+                        <span class="bolded">00</span>
+                        home
                     </a>
                 </li>
                 <li>
                     <a href="./destination.html">
-                        01 destination
+                        <span class="bolded">01</span>
+                        destination
                     </a>
                 </li>
                 <li>
                     <a href="./crew.html">
-                        02 crew
+                        <span class="bolded">02</span>
+                        crew
                     </a>
                 </li>
                 <li>
                     <a href="./technology.html">
-                        03 Technology
+                        <span class="bolded">03</span>
+                        Technology
                     </a>
                 </li>
             </ul>
@@ -75,41 +79,49 @@
 
             <div class="subtitle">
                 <span class="darkened">01</span>
-                <p>PICK YOUR DESTINATION</p>
+                PICK YOUR DESTINATION
             </div>
 
-            <div id="destinationImageContainer">
-                <img id="destImage" src="./assets/destination/image-mars.png" alt="" class="destinationImage">
-            </div>
+            <div class="contentContainer">
 
-            <div class="textDestinationContainer">
-
-                <div class="destinationMenuContainer">
-                    <ul id="destinationMenu">
-                        <li class="linkUnactive" id="destination0" onclick="linkClick(0)">moon</li>
-                        <li class="linkUnactive" id="destination1" onclick="linkClick(1)">mars</li>
-                        <li id="destination2" onclick="linkClick(2)">europa</li>
-                        <li id="destination3" onclick="linkClick(3)">titan</li>
-                    </ul>
-                    
+                <div id="destinationImageContainer" class="contentItem">  
+                    <img id="destImage" src="./assets/destination/image-mars.png" alt="" class="destinationImage">
                 </div>
 
-                <div id="destinationTitle">mars</div>
 
-                <div id="destinationDescription">
-                    <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain
-                        perspective and come back refreshed. While you’re there, take in some history by visiting the
-                        Luna 2 and Apollo 11 landing sites.</p>
-                </div>
 
-                <hr>
+                <div class="textDestinationContainer" class="contentItem">
 
-                <div id="destinationData">
-                    <div id="destinationDistance">Distance</div>
-                    <div id="destinationETA">time</div>
-                </div>
+                    <div class="destinationMenuContainer">
+                        <ul id="destinationMenu">
+                            <li onclick="linkClick(0)">moon</li>
+                            <li onclick="linkClick(1)">mars</li>
+                            <li onclick="linkClick(2)">europa</li>
+                            <li onclick="linkClick(3)">titan</li>
+                        </ul>
 
-            </div><!-- /.textDestinationContainer-->
+                    </div>
+
+                    <div id="destinationTitle">zzz</div>
+
+                    <div id="destinationDescription">
+                        <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain
+                            perspective and come back refreshed. While you’re there, take in some history by visiting
+                            the
+                            Luna 2 and Apollo 11 landing sites.</p>
+                    </div>
+
+                    <hr>
+
+                    <div id="destinationData">
+                        <div id="destinationDistance">Distance</div>
+                        <div id="destinationETA">time</div>
+                    </div>
+
+                </div><!-- /-->
+
+            </div><!-- /.contentContainer -->
+
 
         </div><!-- /#desktopDestination -->
 
@@ -124,28 +136,28 @@
         var destImage = document.getElementById('destImage');
 
 
-        
 
-        function linkClick(linkID){
+
+        function linkClick(linkID) {
 
             fetch('./data.json')
-            .then((response) => {
-                return response.json()
-            })
-            .then((data) => {
-                // Work with JSON data here
-                destinationTitle.innerHTML = data["destinations"][`${linkID}`].name;
-                destinationDescription.innerHTML = data["destinations"][`${linkID}`].description;
-                destinationDistance.innerHTML = data["destinations"][`${linkID}`].distance;
-                destinationETA.innerHTML = data["destinations"][`${linkID}`].travel;
-                destImage.src = data["destinations"][`${linkID}`]["images"]["png"];
-                
+                .then((response) => {
+                    return response.json()
+                })
+                .then((data) => {
+                    // Work with JSON data here
+                    destinationTitle.innerHTML = data["destinations"][`${linkID}`].name;
+                    destinationDescription.innerHTML = data["destinations"][`${linkID}`].description;
+                    destinationDistance.innerHTML = data["destinations"][`${linkID}`].distance;
+                    destinationETA.innerHTML = data["destinations"][`${linkID}`].travel;
+                    destImage.src = data["destinations"][`${linkID}`]["images"]["png"];
 
-                
-            })
-            .catch((err) => {
-                // Do something for an error here
-            })
+
+
+                })
+                .catch((err) => {
+                    // Do something for an error here
+                })
         }
 
 
