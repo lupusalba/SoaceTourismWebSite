@@ -31,7 +31,7 @@
         ul {
             padding: 0;
         }
-        
+
         a {
             text-decoration: none;
         }
@@ -78,43 +78,48 @@
 
         <div id="desktopCrew">
 
-           
+
             <div class="subtitle">
                 <span class="darkened">02</span>
-                <p>meet your crew</p>
+                meet your crew
             </div>
 
-            <div id="temp">
-            <div id="textCrewContainer">
+            <div class="contentContainer">
+                <div id="textCrewContainer">
 
-                <div id="crewRole">
-                    Commander
-                </div>
+                    <div id="crewRole">
+                        Commander
+                    </div>
 
-                <div id="crewName">
-                    Douglas Hurley
-                </div>
+                    <div id="crewName">
+                        Douglas Hurley
+                    </div>
+
+                    <div id="crewBio">
+                        Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut.
+                        He launched into space for the third time as commander of Crew Dragon Demo-2.
+                    </div>
+
+                    <div id="crewNav">
+                        <ul>
+                            <li onclick="linkClick(0)"><span class="bullet"></span></li>
+                            <li onclick="linkClick(1)"><span class="bullet"></span></li>
+                            <li onclick="linkClick(2)"><span class="bullet"></span></li>
+                            <li onclick="linkClick(3)"><span class="bullet"></span></li>
+                        </ul>
+                    </div>
+                </div><!-- /.textCrewContainer -->
+
+
+                <div id="imageCrewContainer">
+                    <img src="./assets/crew/image-douglas-hurley.png" alt="" id="imageCrew">
+                </div><!-- /.imageCrewContainer -->
                 
-                <div id="crewBio">
-                    Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.
-                </div>
+            </div><!--contentContainer-->
 
-            </div><!-- /.textCrewContainer -->
-
-            <div id="crewNav">
-                <ul>
-                    <li onclick="linkClick(0)"><span class="bullet"></span></li>
-                    <li onclick="linkClick(1)"><span class="bullet"></span></li>
-                    <li onclick="linkClick(2)"><span class="bullet"></span></li>
-                    <li onclick="linkClick(3)"><span class="bullet"></span></li>
-                </ul>
-            </div>
-
-            <div id="imageCrewContainer">
-                <img src="./assets/crew/image-douglas-hurley.png" alt="" id="imageCrew">
-            </div><!-- /.imageCrewContainer -->
+            
         </div>
-        </div><!-- /#desktopCrew -->
+    </div><!-- /#desktopCrew -->
 
 
     </div><!-- /.wrapper -->
@@ -126,26 +131,26 @@
         var imageCrew = document.getElementById('imageCrew');
 
 
-        
 
-        function linkClick(linkID){
- 
+
+        function linkClick(linkID) {
+
             fetch('./data.json')
-            .then((response) => {
-                return response.json()
-            })
-            .then((data) => {
-                // Work with JSON data here
-                
-                crewRole.innerHTML = data["crew"][`${linkID}`].role;
-                crewName.innerHTML = data["crew"][`${linkID}`].name;
-                crewBio.innerHTML = data["crew"][`${linkID}`].bio;
-                imageCrew.src = data["crew"][`${linkID}`]["images"]["png"];
-                
-            })
-            .catch((err) => {
-                // Do something for an error here
-            })
+                .then((response) => {
+                    return response.json()
+                })
+                .then((data) => {
+                    // Work with JSON data here
+
+                    crewRole.innerHTML = data["crew"][`${linkID}`].role;
+                    crewName.innerHTML = data["crew"][`${linkID}`].name;
+                    crewBio.innerHTML = data["crew"][`${linkID}`].bio;
+                    imageCrew.src = data["crew"][`${linkID}`]["images"]["png"];
+
+                })
+                .catch((err) => {
+                    // Do something for an error here
+                })
         }
 
 

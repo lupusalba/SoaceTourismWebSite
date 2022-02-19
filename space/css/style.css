@@ -230,6 +230,10 @@ img.destinationImage {
   opacity: 0.3;
 }
 
+img.destinationImage:hover {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
 .destinationMenuContainer {
   width: 286px;
   color: #fff;
@@ -358,9 +362,11 @@ hr {
 }
 
 #textCrewContainer {
-  position: absolute;
-  left: 165px;
-  top: 400px;
+  justify-self: end;
+  justify-content: center;
+  width: auto;
+  max-width: 700px;
+  align-self:center; 
 }
 
 #crewRole {
@@ -368,6 +374,8 @@ hr {
   font-size: 32px;
   opacity: 0.5;
   text-transform: uppercase;
+
+ 
 }
 
 #crewName {
@@ -377,38 +385,37 @@ hr {
   margin: 0px;
 }
 
-#crewName p {
-  margin: 0px;
-}
 
 #crewBio {
   width:450px;
   color: #D0D6F9;
   font-size: 18px;
-  font-family: Barlow;
+  font-family: "Barlow";
+  display:inline-block;
 }
 
-#imageCrewContainer {
-  position: absolute;
-  bottom: 0px;
-  left: 735px;
+  #imageCrewContainer {
+  min-height: 300px;
   height: auto;
   width: 350px;
+
+  justify-self: start;
+  justify-content: center;
+  align-self: center;
+
 }
 
 img#imageCrew {
   height: 710px;
   width: auto;
+  position: absolute;
+  bottom: 0;
 }
 
 
 #crewNav ul {
   list-style: none;
-  padding: 0;
-  position: absolute;
-  top: 790px;
-  left: 165px;
-
+  margin-top: 150px;
 }
 
 #crewNav ul li {
