@@ -31,6 +31,10 @@
         ul {
             padding: 0;
         }
+
+        a {
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -45,22 +49,26 @@
             <ul class="navigation">
                 <li>
                     <a href="./index.html">
-                        00 home
+                        <span class="bolded">00</span>
+                        home
                     </a>
                 </li>
                 <li>
                     <a href="./destination.html">
-                        01 destination
+                        <span class="bolded">01</span>
+                        destination
                     </a>
                 </li>
                 <li>
                     <a href="./crew.html">
-                        02 crew
+                        <span class="bolded">02</span>
+                        crew
                     </a>
                 </li>
                 <li>
                     <a href="./technology.html">
-                        03 Technology
+                        <span class="bolded">03</span>
+                        Technology
                     </a>
                 </li>
             </ul>
@@ -100,7 +108,7 @@
     
 
             <div id="imageTechnologyContainer">
-                <img src="" alt="" id="">
+                <img src="./assets/technology/image-launch-vehicle-portrait.jpg" alt="" id="imageTechnology">
             </div><!-- /.imageTechnologyContainer -->
         </div><!-- /#desktopTechnology -->
 
@@ -110,7 +118,7 @@
     <script>
         var nameTechno = document.getElementById('technologyTitle');
         var description = document.getElementById('technologyDescription');
-        var image = document.getElementById('imageTechnologyContainer');
+        var imageTechno = document.getElementById('imageTechnology');
 
         //bc = './assets/technology/image-launch-vehicle-landscape.jpg';
         //image.style.backgroundImage = `"url('${bc}')"`;
@@ -126,16 +134,9 @@
             .then((data) => {
                 // Work with JSON data here
 
-                var temp = 'data["technology"][`${linkID}`]["images"]["landscape"]';
-                console.log(data["technology"][1]["images"]["landscape"]);
-                console.log(temp);
                 nameTechno.innerHTML = data["technology"][`${linkID}`].name;
                 description.innerHTML = data["technology"][`${linkID}`].description;
-                image.style.backgroundImage = url('data["technology"][`${linkID}`]["images"]["landscape"]');
-                //image.style.backgroundImage = `"url('${temp}')"`;
-
-               // document.getElementById('imageTechnologyContainer').style.backgroundImage = 
-                "url('`${temp}`')";
+                console.log(imageTechno.src = data["technology"][`${linkID}`]["images"]["portrait"]);            
                 
             })
             .catch((err) => {
