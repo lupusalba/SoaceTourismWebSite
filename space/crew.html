@@ -24,8 +24,8 @@
     <style type="text/css">
         body {
             margin: 0;
-            overflow-x: hidden;
             box-sizing: border-box;
+            overflow-x: hidden;
         }
 
         ul {
@@ -35,14 +35,18 @@
         a {
             text-decoration: none;
         }
+
+        #crewWrapper {
+            margin-top: -10px;
+            background-color: #000;
+        }
     </style>
 </head>
 
 <body>
 
 
-
-    <div id="destinationWrapper" class="wrapper">
+    <div id="crewWrapper" class="wrapper">
 
         <nav id="menu">
             <img src="/space/assets/shared/logo.svg" alt="Logo" class="logo">
@@ -106,68 +110,64 @@
         </div>
 
         <!-- Use any element to open/show the overlay navigation menu -->
-        <span onclick="openNav()" id="navIcon"><img src="./assets/shared/icon-hamburger.svg" height="40" width="40"></span>
+        <span onclick="openNav()" id="navIcon">
+            <img src="./assets/shared/icon-hamburger.svg" height="50" width="50"></span>
 
+        <hr class="menuHr">
 
-        <div id="desktopDestination">
+        <div id="desktopCrew">
+
 
             <div class="subtitle">
-                <span class="darkened">01</span>
-                PICK YOUR DESTINATION
+                <span class="darkened">02</span>
+                meet your crew
             </div>
 
             <div class="contentContainer">
+                <div id="textCrewContainer">
 
-                <div id="destinationImageContainer" class="contentItem">  
-                    <img id="destImage" src="./assets/destination/image-mars.png" alt="" class="destinationImage">
-                </div>
+                    <div id="crewRole">
+                        Commander
+                    </div>
 
+                    <div id="crewName">
+                        Douglas Hurley
+                    </div>
 
+                    <div id="crewBio">
+                        Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut.
+                        He launched into space for the third time as commander of Crew Dragon Demo-2.
+                    </div>
 
-                <div class="textDestinationContainer" class="contentItem">
-
-                    <div class="destinationMenuContainer">
-                        <ul id="destinationMenu">
-                            <li onclick="linkClick(0)">moon</li>
-                            <li onclick="linkClick(1)">mars</li>
-                            <li onclick="linkClick(2)">europa</li>
-                            <li onclick="linkClick(3)">titan</li>
+                    <div id="crewNav">
+                        <ul>
+                            <li onclick="linkClick(0)"><span class="bullet"></span></li>
+                            <li onclick="linkClick(1)"><span class="bullet"></span></li>
+                            <li onclick="linkClick(2)"><span class="bullet"></span></li>
+                            <li onclick="linkClick(3)"><span class="bullet"></span></li>
                         </ul>
-
                     </div>
-
-                    <div id="destinationTitle">Mars</div>
-
-                    <div id="destinationDescription">
-                        <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain
-                            perspective and come back refreshed. While you’re there, take in some history by visiting
-                            the
-                            Luna 2 and Apollo 11 landing sites.</p>
-                    </div>
-
-                    <hr>
-
-                    <div id="destinationData">
-                        <div id="destinationDistance">384,400 km</div>
-                        <div id="destinationETA">3 days</div>
-                    </div>
-
-                </div><!-- /-->
-
-            </div><!-- /.contentContainer -->
+                </div><!-- /.textCrewContainer -->
 
 
-        </div><!-- /#desktopDestination -->
+                <div id="imageCrewContainer">
+                    <img src="./assets/crew/image-douglas-hurley.png" alt="" id="imageCrew">
+                </div><!-- /.imageCrewContainer -->
+                
+            </div><!--contentContainer-->
+
+            
+        </div>
+    </div><!-- /#desktopCrew -->
 
 
     </div><!-- /.wrapper -->
 
     <script>
-        var destinationTitle = document.getElementById('destinationTitle');
-        var destinationDescription = document.getElementById('destinationDescription');
-        var destinationDistance = document.getElementById('destinationDistance');
-        var destinationETA = document.getElementById('destinationETA');
-        var destImage = document.getElementById('destImage');
+        var crewRole = document.getElementById('crewRole');
+        var crewName = document.getElementById('crewName');
+        var crewBio = document.getElementById('crewBio');
+        var imageCrew = document.getElementById('imageCrew');
 
 
 
@@ -180,13 +180,11 @@
                 })
                 .then((data) => {
                     // Work with JSON data here
-                    destinationTitle.innerHTML = data["destinations"][`${linkID}`].name;
-                    destinationDescription.innerHTML = data["destinations"][`${linkID}`].description;
-                    destinationDistance.innerHTML = data["destinations"][`${linkID}`].distance;
-                    destinationETA.innerHTML = data["destinations"][`${linkID}`].travel;
-                    destImage.src = data["destinations"][`${linkID}`]["images"]["png"];
 
-
+                    crewRole.innerHTML = data["crew"][`${linkID}`].role;
+                    crewName.innerHTML = data["crew"][`${linkID}`].name;
+                    crewBio.innerHTML = data["crew"][`${linkID}`].bio;
+                    imageCrew.src = data["crew"][`${linkID}`]["images"]["png"];
 
                 })
                 .catch((err) => {
@@ -194,9 +192,8 @@
                 })
         }
 
-        
         /* Open when someone clicks on the span element */
-function openNav() {
+        function openNav() {
     document.getElementById("myNav").style.width = "100%";
   }
   
@@ -204,7 +201,6 @@ function openNav() {
   function closeNav() {
     document.getElementById("myNav").style.width = "0%";
   }
-
 
     </script>
 
