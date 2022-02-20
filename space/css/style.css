@@ -12,7 +12,6 @@ ul {
   min-height: 100%;
   width: 100vw;
   min-width: 100%;
-  background-color: #ccc;
   position: relative;
   background-size: cover;
 background-repeat: no-repeat;
@@ -21,17 +20,14 @@ background-position: center;
 
 .container {
   height: 100vh;
-  min-width: 70vw;
-  margin: 0 15vw;
+  min-height: 100%;
   position: relative;
 }
+
 /****************************
     header nav
 ****************************/
 #menu {
-  /* position: absolute;
-  top: 40px;
-  right: 0; */
   height: 96px;
   width: 100%;
   color: #fff;
@@ -104,13 +100,7 @@ background-position: center;
 ****************************/
 
 #desktopHome {
-  height: 100vh;
-  min-height: 100%;
-  width: 100%;
-  min-width: 100vw;
   background-image: url(../assets/home/background-home-desktop.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: right center;
 }
 .textContainer {
@@ -121,13 +111,12 @@ background-position: center;
 }
 
 .beforeTitle {
-  font-size: 28px;
+  font-size: 1.3em /*28px;*/;
   font-weight: 400;
   text-transform: uppercase;
   font-family: "Barlow Condensed";
   font-style: normal;
   font-weight: normal;
-  font-size: 28px;
   line-height: 34px;
   letter-spacing: 4.725px;
   color: #d0d6f9;
@@ -137,7 +126,7 @@ background-position: center;
   font-family: "Bellefair";
   font-style: normal;
   font-weight: normal;
-  font-size: 150px;
+  font-size: 10em /*150px*/;
   line-height: 172px;
   color: #fff;
   text-transform: uppercase;
@@ -148,14 +137,14 @@ background-position: center;
   font-family: "Barlow";
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 1.5em/* 18px*/;
   line-height: 32px;
 }
 
 .btnWhiteBig {
-  position: absolute;
-  bottom: 10%;
-  right: 20%;
+  justify-self: center;
+  justify-content: center;
+  align-self: center;
 
   width: 274px;
   height: 274px;
@@ -167,7 +156,7 @@ background-position: center;
   font-family: "Bellefair";
   font-style: normal;
   font-weight: normal;
-  font-size: 32px;
+  font-size: 2em/*32px*/;
   line-height: 37px;
   letter-spacing: 2px;
   box-shadow: 0;
@@ -198,8 +187,11 @@ background-position: center;
 }
 
 .subtitle {
+  position: absolute;
+  top: 20%;
+  left: 0;
   height: 34px;
-  width: 380px;
+  width: auto;
   margin-left: 10%;
   color: #fff;
   display: inline;
@@ -317,13 +309,7 @@ hr {
 
 }
 
-.subtitle {
-  position: absolute;
-  top: 200px;
-  left: 300px;
-  width: 400px;
-  
-}
+
 
 
 /********************************************
@@ -364,8 +350,7 @@ hr {
 #textCrewContainer {
   justify-self: end;
   justify-content: center;
-  width: auto;
-  max-width: 700px;
+  width: 550px;
   align-self:center; 
 }
 
@@ -412,8 +397,14 @@ img#imageCrew {
   bottom: 0;
 }
 
+#crewNav {
+  position: relative;
+}
 
 #crewNav ul {
+  position: absolute;
+  bottom: -250px;
+  
   list-style: none;
   margin-top: 150px;
 }
@@ -439,9 +430,6 @@ img#imageCrew {
 #textTechnologyContainer {
   width: 470px;
   height: 303px;
-  position: absolute;
-  top: 383px;
-  left: 325px;
 }
 
 #technologySubtitle {
@@ -452,21 +440,18 @@ img#imageCrew {
 
 #technologyTitle {
   font-family: "Bellefair";
-  font-size: 56px;
+  font-size: 3.5em; /*56px*/
   width: 500px;
   text-transform: uppercase;
 }
 
 #technologyDescription {
   font-family: "Barlow";
-  font-size: 18px;
+  font-size: 1.5em/*18px*/;
   color: #D0D6F9;
 }
 
 #technologyNav {
-  position: absolute;
-  left: 165px;
-  top: 383px;
   margin:0;
   padding: 0;
 }
@@ -492,15 +477,50 @@ img#imageCrew {
 }
 
 #imageTechnologyContainer {
-  position: absolute;
   height: 527px;
   width: 515px;
-  top: 272px;
-  right: 0;
-  overflow: hidden;
 }
 
 #imageTechnology {
   height: 100%;
   width: 100%;
+}
+
+
+.contentContainerTech {
+  height: 100%;
+  width: 100%;
+
+  display: grid; 
+  grid-auto-flow: column dense; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: .5fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 30px; 
+  grid-template-areas:  
+    ". ."; 
+  align-content: center; 
+  justify-items: center; 
+  align-items: center; 
+
+}
+
+#technologyNav {
+  justify-self: end;
+  justify-content: center;
+  align-self: center;
+}
+
+#textTechnologyContainer {
+  justify-self: start;
+  justify-content: center;
+  align-self: center;
+}
+
+#imageTechnologyContainer {
+  justify-self: start;
+  justify-content: center;
+  width: 500px;
+  align-self:center;
+
 }

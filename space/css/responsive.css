@@ -4,7 +4,15 @@
 */
 
 @media (min-width: 1281px) {
-  /* CSS */
+  .container {
+    min-width: 70vw;
+    margin: 0 15vw;
+  }
+  .textContainer {
+    width: 445px;
+    justify-self: end;
+  }
+  
 }
 
 /* 
@@ -13,7 +21,25 @@
   */
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-  /* CSS */
+  body {
+    overflow: visible;
+  }
+  .container {
+    height: 100%;
+    min-width: 70vw;
+    margin: 0 15vw;
+  }
+  .textContainer {
+    margin-top: 200px;
+    width: 445px;
+    justify-self: center;
+  }
+
+  .contentContainer {
+    grid-auto-rows: 2fr; 
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr; 
+  }
 }
 
 /* 
@@ -22,7 +48,25 @@
   */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* CSS */
+  body {
+    overflow: visible;
+  }
+  .container {
+    height: 100%;
+    min-width: 80vw;
+    margin: 0 10vw;
+  }
+  .textContainer {
+    margin-top: 200px;
+    width: 445px;
+    justify-self: center;
+  }
+
+  .contentContainer {
+    grid-auto-rows: 2fr; 
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr; 
+  }
 }
 
 /* 
@@ -31,7 +75,26 @@
   */
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  /* CSS */
+  
+  body {
+    overflow: visible;
+  }
+  .container {
+    height: 100%;
+    min-width: 80vw;
+    margin: 0 10vw;
+  }
+  .textContainer {
+    margin-top: 200px;
+    width: 445px;
+    justify-self: center;
+  }
+
+  .contentContainer {
+    grid-auto-rows: 2fr; 
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr; 
+  }
 }
 
 /* 
@@ -40,7 +103,31 @@
   */
 
 @media (min-width: 481px) and (max-width: 767px) {
-  /* CSS */
+  body {
+    overflow: visible;
+  }
+  .container {
+    height: 100%;
+    min-width: 90vw;
+    margin: 0 5vw;
+  }
+  .textContainer {
+    margin-top: 200px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    justify-self: center;
+  }
+
+  .title {
+    font-size: 7em;
+  }
+
+  .contentContainer {
+    grid-auto-rows: 2fr; 
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr; 
+  }
 }
 
 /* 
@@ -49,5 +136,28 @@
   */
 
 @media (min-width: 320px) and (max-width: 480px) {
-  /* CSS */
+  body {
+    overflow: visible;
+  }
+  .container {
+    height: 100%;
+    min-width: 90vw;
+    margin: 0 5vw;
+  }
+  .textContainer {
+    margin-top: 200px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    justify-self: center;
+  }
+
+  .title {
+    font-size: 7em;
+  }
+  .contentContainer {
+    grid-auto-rows: 2fr; 
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr; 
+  }
 }
