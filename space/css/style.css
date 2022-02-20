@@ -8,14 +8,16 @@ ul {
 }
 
 .wrapper {
-  height: 100vh;
-  min-height: 100%;
+  min-height: 100vh;
+   height: 100%;
   width: 100vw;
   min-width: 100%;
   position: relative;
   background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
+color: #fff;
+margin: 0 auto;
 }
 
 .container {
@@ -174,17 +176,17 @@ background-position: center;
 
 #destinationWrapper {
   background-image: url(../assets/destination/background-destination-desktop.jpg);
-  display: flex;
 }
-
+/* 
 #desktopCrew,
 #desktopTechnology {
   width: 100%;
   height: 100vh;
+  min-height: 100%;
   margin: 0 auto;
   color: #fff;
   position: relative;
-}
+} */
 
 .subtitle {
   position: absolute;
@@ -213,7 +215,6 @@ background-position: center;
 
 #destinationWrapper {
   background-image: url(../assets/destination/background-destination-desktop.jpg);
-  display: flex;
 }
 
 img.destinationImage {
@@ -227,7 +228,8 @@ img.destinationImage:hover {
   transition: opacity 0.5s;
 }
 .destinationMenuContainer {
-  width: 286px;
+  text-align: left;
+  width: auto;
   color: #fff;
   text-transform: uppercase;
 }
@@ -246,6 +248,9 @@ img.destinationImage:hover {
 
 .textDestinationContainer {
   width: 445px;
+  justify-self: start;
+  justify-content: center;
+  align-self: center;
 }
 
 #destinationTitle {
@@ -274,12 +279,20 @@ hr {
     color: #fff;
 }
 
+#destinationDistance,
+#destinationETA {
+  display: inline;
+  width: 50%;
+  text-align: center;
+  font-size: 1.5em;
+}
+
 
 
 .contentContainer {
   height: 100%;
   width: 100%;
-
+  padding-top: 300px;
   display: grid; 
   grid-auto-flow: column dense; 
   grid-auto-rows: 1fr; 
@@ -335,7 +348,6 @@ hr {
 #desktopDestination {
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 
@@ -372,7 +384,8 @@ hr {
 
 
 #crewBio {
-  width:450px;
+  max-width:450px;
+  width: auto;
   color: #D0D6F9;
   font-size: 18px;
   font-family: "Barlow";
@@ -393,8 +406,6 @@ hr {
 img#imageCrew {
   height: 710px;
   width: auto;
-  position: absolute;
-  bottom: 0;
 }
 
 #crewNav {
@@ -402,8 +413,8 @@ img#imageCrew {
 }
 
 #crewNav ul {
-  position: absolute;
-  bottom: -250px;
+  /* position: absolute;
+  bottom: -250px; */
   
   list-style: none;
   margin-top: 150px;
@@ -425,10 +436,13 @@ img#imageCrew {
 
 #desktopTechnologyWrapper {
   background-image: url('../assets/technology/background-technology-desktop.jpg');
+  height: 100%;
+  min-height: 100vh;
 }
 
 #textTechnologyContainer {
-  width: 470px;
+  max-width: 470px;
+  width: auto;
   height: 303px;
 }
 
@@ -488,13 +502,13 @@ img#imageCrew {
 
 
 .contentContainerTech {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
 
   display: grid; 
   grid-auto-flow: column dense; 
-  grid-auto-rows: 1fr; 
-  grid-template-columns: .5fr 1fr 1fr; 
+  /* grid-auto-rows: 1fr;  */
+  grid-template-columns: 100px 1fr 1fr;
   grid-template-rows: 1fr; 
   gap: 30px; 
   grid-template-areas:  
@@ -503,6 +517,7 @@ img#imageCrew {
   justify-items: center; 
   align-items: center; 
 
+  margin-top: 200px;
 }
 
 #technologyNav {
@@ -515,6 +530,8 @@ img#imageCrew {
   justify-self: start;
   justify-content: center;
   align-self: center;
+
+  
 }
 
 #imageTechnologyContainer {

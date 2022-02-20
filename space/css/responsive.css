@@ -30,7 +30,6 @@
     margin: 0 15vw;
   }
   .textContainer {
-    margin-top: 200px;
     width: 445px;
     justify-self: center;
   }
@@ -38,7 +37,40 @@
   .contentContainer {
     grid-auto-rows: 2fr; 
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr;
+  }
+  .textDestinationContainer {
+    justify-self: center;
+    width: 500px;
+    text-align: center;
+  }
+  #destinationImageContainer {
+    justify-self: center;
+  }
+  #textCrewContainer {
+    justify-self: center;
+    width: 550px;
+  }
+  #imageCrewContainer {
+    justify-self: center;
+  }
+  .contentContainerTech {
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 100px 1fr 1fr; 
+    margin-top: 150px;
+  }
+
+  #technologyNav {
+    justify-self: center;
+  }
+  #technologyNav button {
+    display: inline;
+    margin: 0 auto;
+  }
+  #textTechnologyContainer,
+  #imageTechnologyContainer{
+    justify-self: center;
   }
 }
 
@@ -57,7 +89,6 @@
     margin: 0 10vw;
   }
   .textContainer {
-    margin-top: 200px;
     width: 445px;
     justify-self: center;
   }
@@ -66,6 +97,46 @@
     grid-auto-rows: 2fr; 
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr; 
+  }
+  .textDestinationContainer {
+    justify-self: center;
+    justify-content: center;
+    width: 500px;
+    align-self:center;
+  }
+  .textDestinationContainer {
+    justify-self: center;
+    width: 500px;
+    text-align: center;
+  }
+  #destinationImageContainer {
+    justify-self: center;
+  }
+  #textCrewContainer {
+    justify-self: center;
+    width: 70%;
+    margin: auto 15%;
+  }
+  #imageCrewContainer {
+    justify-self: center;
+  }
+  .contentContainerTech {
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 100px 1fr 1fr; 
+    margin-top: 150px;
+  }
+
+  #technologyNav {
+    justify-self: center;
+  }
+  #technologyNav button {
+    display: inline;
+    margin: 0 auto;
+  }
+  #textTechnologyContainer,
+  #imageTechnologyContainer{
+    justify-self: center;
   }
 }
 
@@ -85,15 +156,49 @@
     margin: 0 10vw;
   }
   .textContainer {
-    margin-top: 200px;
     width: 445px;
     justify-self: center;
+    text-align: center;
   }
 
   .contentContainer {
     grid-auto-rows: 2fr; 
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr; 
+  }
+  .textDestinationContainer {
+    justify-self: center;
+    width: 500px;
+    text-align: center;
+  }
+  #destinationImageContainer {
+    justify-self: center;
+  }
+  #textCrewContainer {
+    justify-self: center;
+    width: 80%;
+    margin: auto 10%;
+  }
+  #imageCrewContainer {
+    justify-self: center;
+  }
+  .contentContainerTech {
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 100px 1fr 1fr; 
+    margin-top: 150px;
+  }
+
+  #technologyNav {
+    justify-self: center;
+  }
+  #technologyNav button {
+    display: inline;
+    margin: 0 auto;
+  }
+  #textTechnologyContainer,
+  #imageTechnologyContainer{
+    justify-self: center;
   }
 }
 
@@ -112,11 +217,11 @@
     margin: 0 5vw;
   }
   .textContainer {
-    margin-top: 200px;
     margin-left: 10%;
     margin-right: 10%;
     width: 80%;
     justify-self: center;
+    text-align: center;
   }
 
   .title {
@@ -127,6 +232,41 @@
     grid-auto-rows: 2fr; 
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr; 
+  }
+  .textDestinationContainer {
+    justify-self: center;
+    width: 80%;
+    text-align: center;
+    margin: auto 10%;
+  }
+  #destinationImageContainer {
+    justify-self: center;
+  }
+  #textCrewContainer {
+    justify-self: center;
+    width: 90%;
+    margin: auto 5%;
+  }
+  #imageCrewContainer {
+    justify-self: center;
+  }
+  .contentContainerTech {
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 100px 1fr 1fr; 
+    margin-top: 150px;
+  }
+
+  #technologyNav {
+    justify-self: center;
+  }
+  #technologyNav button {
+    display: inline;
+    margin: 0 auto;
+  }
+  #textTechnologyContainer,
+  #imageTechnologyContainer{
+    justify-self: center;
   }
 }
 
@@ -145,11 +285,11 @@
     margin: 0 5vw;
   }
   .textContainer {
-    margin-top: 200px;
     margin-left: 10%;
     margin-right: 10%;
     width: 80%;
     justify-self: center;
+    text-align: center;
   }
 
   .title {
@@ -159,5 +299,40 @@
     grid-auto-rows: 2fr; 
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr; 
+  }
+  .textDestinationContainer {
+    justify-self: center;
+    width: 90%;
+    text-align: center;
+    margin: auto 5%;
+  }
+  #destinationImageContainer {
+    justify-self: center;
+  }
+  #textCrewContainer {
+    justify-self: center;
+    width: 90%;
+    margin: auto 5%;
+  }
+  #imageCrewContainer {
+    justify-self: center;
+  }
+  .contentContainerTech {
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 100px 1fr 1fr; 
+    margin-top: 150px;
+  }
+
+  #technologyNav {
+    justify-self: center;
+  }
+  #technologyNav button {
+    display: inline;
+    margin: 0 auto;
+  }
+  #textTechnologyContainer,
+  #imageTechnologyContainer{
+    justify-self: center;
   }
 }

@@ -25,7 +25,7 @@
         body {
             margin: 0;
             box-sizing: border-box;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         ul {
@@ -34,6 +34,10 @@
 
         a {
             text-decoration: none;
+        }
+
+        #desktopTechnologyWrapper {
+            margin-top: -10px;
         }
     </style>
 </head>
@@ -80,38 +84,45 @@
 
             <div class="subtitle">
                 <span class="darkened">03</span>
-                <p>SPACE LAUNCH 101</p>
+                SPACE LAUNCH 101
             </div>
 
-            <div id="technologyNav">
-                <button onclick="linkClick(0)">1</button>
-                <button onclick="linkClick(1)">2</button>
-                <button onclick="linkClick(2)">3</button>
-            </div><!--  /#technologyNav -->
 
-            <div id="textTechnologyContainer">
+            <div class="contentContainerTech">
 
-                <div id="technologySubtitle">
-                    THE TERMINOLOGY…
-                </div>
+                <div id="technologyNav">
+                    <button onclick="linkClick(0)">1</button>
+                    <button onclick="linkClick(1)">2</button>
+                    <button onclick="linkClick(2)">3</button>
+                </div><!--  /#technologyNav -->
 
-                <div id="technologyTitle">
-                    LAUNCH VEHICLE
-                </div>
+                <div id="textTechnologyContainer">
 
-                <div id="technologyDescription">
-                    A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!
-                </div>
+                    <div id="technologySubtitle">
+                        THE TERMINOLOGY…
+                    </div>
 
-            </div><!-- /.textTechnologyContainer -->
+                    <div id="technologyTitle">
+                        LAUNCH VEHICLE
+                    </div>
 
-    
+                    <div id="technologyDescription">
+                        A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from
+                        Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most
+                        powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch
+                        pad!
+                    </div>
 
-            <div id="imageTechnologyContainer">
-                <img src="./assets/technology/image-launch-vehicle-portrait.jpg" alt="" id="imageTechnology">
-            </div><!-- /.imageTechnologyContainer -->
-        </div><!-- /#desktopTechnology -->
+                </div><!-- /.textTechnologyContainer -->
 
+
+
+                <div id="imageTechnologyContainer">
+                    <img src="./assets/technology/image-launch-vehicle-portrait.jpg" alt="" id="imageTechnology">
+                </div><!-- /.imageTechnologyContainer -->
+            </div><!-- /#desktopTechnology -->
+
+        </div>
 
     </div><!-- /.wrapper -->
 
@@ -123,25 +134,25 @@
         //bc = './assets/technology/image-launch-vehicle-landscape.jpg';
         //image.style.backgroundImage = `"url('${bc}')"`;
 
-        
 
-        function linkClick(linkID){
+
+        function linkClick(linkID) {
 
             fetch('./data.json')
-            .then((response) => {
-                return response.json()
-            })
-            .then((data) => {
-                // Work with JSON data here
+                .then((response) => {
+                    return response.json()
+                })
+                .then((data) => {
+                    // Work with JSON data here
 
-                nameTechno.innerHTML = data["technology"][`${linkID}`].name;
-                description.innerHTML = data["technology"][`${linkID}`].description;
-                console.log(imageTechno.src = data["technology"][`${linkID}`]["images"]["portrait"]);            
-                
-            })
-            .catch((err) => {
-                // Do something for an error here
-            })
+                    nameTechno.innerHTML = data["technology"][`${linkID}`].name;
+                    description.innerHTML = data["technology"][`${linkID}`].description;
+                    console.log(imageTechno.src = data["technology"][`${linkID}`]["images"]["portrait"]);
+
+                })
+                .catch((err) => {
+                    // Do something for an error here
+                })
         }
 
 
